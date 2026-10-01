@@ -12,4 +12,16 @@
     <string name="scorpio">Scorpio</string>
     <string name="taurus">Taurus</string>
     <string name="virgo">Virgo</string>
+    <string name="aquarius_date">January 20 to February 18</string>
+    <string name="aries_date">March 21 to April 19</string>
+    <string name="cancer_date">June 21 to July 22</string>
+    <string name="capricorn_date">December 22 to January 19</string>
+    <string name="gemini_date">May 21 to June 20</string>
+    <string name="leo_date">July 23 to August 22</string>
+    <string name="libra_date">September 23 to October 22</string>
+    <string name="pisces_date">February 19 to March 20</string>
+    <string name="sagittarius_date">November 22 to December 21</string>
+    <string name="scorpio_date">October 23 to November 21</string>
+    <string name="taurus_date">April 20 to May 20</string>
+    <string name="virgo_date">August 23 to September 22</string>
 </resources>
