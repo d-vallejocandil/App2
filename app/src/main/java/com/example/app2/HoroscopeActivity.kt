@@ -1,6 +1,8 @@
 package com.example.app2
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -29,5 +31,25 @@ class HoroscopeActivity : AppCompatActivity() {
         name.setText(horoscope.name)
         dates.setText(horoscope.dates)
         icon.setImageResource(horoscope.icon)
+        supportActionBar?.title = getString(horoscope.name)
+        supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.activity_horoscope, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return if (item.itemId == R.id.favorite) {
+
+            return true
+        } else if (item.itemId == R.id.share) {
+
+            return true
+        } else if (item.itemId == android.R.id.home) {
+            finish()
+            return true
+        } else {
+            return super.onOptionsItemSelected(item)
+        }
     }
 }

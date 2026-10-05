@@ -24,4 +24,7 @@
     <string name="scorpio_date">October 23 to November 21</string>
     <string name="taurus_date">April 20 to May 20</string>
     <string name="virgo_date">August 23 to September 22</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
 </resources>
