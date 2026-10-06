@@ -28,4 +28,5 @@
     <string name="search">Búsqueda</string>
     <string name="favorite">Favorito</string>
     <string name="share">Compartir</string>
+    <string name="home">Inicio</string>
 </resources>

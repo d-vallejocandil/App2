@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class HoroscopeAdapter(val horoscopes: List<Horoscope>, val listener: (Int) -> Unit): RecyclerView.Adapter<HoroscopeViewHolder>() {
+class HoroscopeAdapter(var horoscopes: List<Horoscope>, val listener: (Int) -> Unit): RecyclerView.Adapter<HoroscopeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HoroscopeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.horoscopes, parent, false)
         return HoroscopeViewHolder(view)
@@ -18,5 +18,9 @@ class HoroscopeAdapter(val horoscopes: List<Horoscope>, val listener: (Int) -> U
     }
     override fun getItemCount(): Int {
         return horoscopes.size
+    }
+    fun update(items: List<Horoscope>) {
+        horoscopes = items
+        notifyDataSetChanged()
     }
 }

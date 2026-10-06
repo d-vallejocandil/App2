@@ -21,7 +21,6 @@ data class Horoscope(
             Horoscope("taurus", R.string.taurus, R.string.taurus_date, R.drawable.taurus_svgrepo_com),
             Horoscope("virgo", R.string.virgo, R.string.virgo_date, R.drawable.virgo_svgrepo_com)
         )
-
         fun getAll(): List<Horoscope> {
             return horoscopes
         }

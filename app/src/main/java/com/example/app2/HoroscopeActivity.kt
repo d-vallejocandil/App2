@@ -32,24 +32,27 @@ class HoroscopeActivity : AppCompatActivity() {
         dates.setText(horoscope.dates)
         icon.setImageResource(horoscope.icon)
         supportActionBar?.title = getString(horoscope.name)
-        supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.activity_horoscope, menu)
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (item.itemId == R.id.favorite) {
-
-            return true
-        } else if (item.itemId == R.id.share) {
-
-            return true
-        } else if (item.itemId == android.R.id.home) {
-            finish()
-            return true
-        } else {
-            return super.onOptionsItemSelected(item)
+        return when (item.itemId) {
+            R.id.favorite -> {
+                return true
+            }
+            R.id.share -> {
+                return true
+            }
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
         }
     }
 }

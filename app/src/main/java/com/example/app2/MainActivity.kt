@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
         recyclerView.adapter = horoscopeAdapter
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        supportActionBar?.title = getString(R.string.home)
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.activity_main, menu)
@@ -44,11 +45,15 @@ class MainActivity : AppCompatActivity() {
                     return false
                 }
                 override fun onQueryTextChange(newText: String?): Boolean {
-
+                    if (newText != null) {
+                         val aux = horoscopes.filter {
+                            getString(it.name).contains(newText, true)
+                        }
+                        horoscopeAdapter.update(aux)
+                    }
                     return true
                 }
             })
         return true
     }
-
 }
