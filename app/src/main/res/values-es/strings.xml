@@ -29,4 +29,7 @@
     <string name="favorite">Favorito</string>
     <string name="share">Compartir</string>
     <string name="home">Inicio</string>
+    <string name="daily">Diario</string>
+    <string name="weekly">Semanal</string>
+    <string name="monthly">Mensual</string>
 </resources>

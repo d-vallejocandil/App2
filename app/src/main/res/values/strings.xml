@@ -28,4 +28,7 @@
     <string name="favorite">Favorite</string>
     <string name="share">Share</string>
     <string name="home">Home</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
 </resources>
