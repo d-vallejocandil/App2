@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         supportActionBar?.title = getString(R.string.home)
     }
+    override fun onResume() {
+        super.onResume()
+        horoscopeAdapter.notifyDataSetChanged()
+    }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.activity_main, menu)
         val search = menu.findItem(R.id.search).actionView as SearchView

@@ -33,12 +33,19 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 style="@style/Widget.Material3.CardView.Filled">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:orientation="vertical"
                         android:padding="10dp">
 
@@ -46,15 +53,22 @@
                             android:id="@+id/name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             tools:text="@string/aquarius"/>
 
                         <TextView
                             android:id="@+id/dates"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/aquarius_date"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/favorite"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/favorite_24px_2"
+                        android:layout_margin="10dp"/>
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
